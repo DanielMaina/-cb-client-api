@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+import NotFound from './components/global/NotFound'
 
 import PageRender from './PageRender'
 import Header from './components/global/Header'
@@ -42,7 +43,7 @@ const App = () => {
           <Route path="login-sms" element={<LoginSMS />} />
         
           <Route path="account-setup" element={<AccountSetupPage />} />
-
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />
